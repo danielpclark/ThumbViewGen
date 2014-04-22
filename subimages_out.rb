@@ -11,7 +11,7 @@ Find.find('./') do |f|
 		xval = f.match(".#{type}")
 		if not xval.nil?
 			f.each do |thumbnail|
-				print "<img src='/home/daniel/#{thumbnail}' />"
+				print "<img src='#{File.expand_path('~') + '/' + thumbnail}' />"
 			end
 		end
 	end
